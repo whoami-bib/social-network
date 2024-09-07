@@ -1,0 +1,285 @@
+{
+    "collection": {
+      "info": {
+        "_postman_id": "f40252aa-2e93-40a3-9939-9d49600eaa55",
+        "name": "social-network",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "updatedAt": "2024-09-07T04:01:29.000Z",
+        "createdAt": "2024-09-07T02:51:24.000Z",
+        "lastUpdatedBy": "24791289",
+        "uid": "24791289-f40252aa-2e93-40a3-9939-9d49600eaa55"
+      },
+      "item": [
+        {
+          "name": "signup",
+          "id": "c5e79df4-57e3-48ad-8613-ae2c13a5b792",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "bibin6724@gmail.com ",
+                  "type": "text"
+                },
+                {
+                  "key": "username",
+                  "value": "bibin",
+                  "type": "text"
+                },
+                {
+                  "key": "first_name",
+                  "value": "bibin",
+                  "type": "text"
+                },
+                {
+                  "key": "last_name",
+                  "value": "babu",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "123",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/signup/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "signup",
+                ""
+              ]
+            }
+          },
+          "response": [],
+          "uid": "24791289-c5e79df4-57e3-48ad-8613-ae2c13a5b792"
+        },
+        {
+          "name": "Login",
+          "id": "faf77ce1-6a45-48d2-bda3-a5c3163b1728",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "bibiN6724@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "123",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/login/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "login",
+                ""
+              ]
+            }
+          },
+          "response": [],
+          "uid": "24791289-faf77ce1-6a45-48d2-bda3-a5c3163b1728"
+        },
+        {
+          "name": "send friend requests",
+          "id": "90ab9536-5055-4933-b4f1-83df30b9ad7d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1NjgwODMwLCJpYXQiOjE3MjU2NzkwMzAsImp0aSI6ImIzZTVkMjU2NGIyMTQzYzU5YTUyZGZkODcwNWVhOWRiIiwidXNlcl9pZCI6NH0.hiFzWSJFx0RTSXgV3g0Zy0zsuU9tYztEEUGoEEzHkyo",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "receiver",
+                  "value": "2",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/send-friend-request/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "send-friend-request",
+                ""
+              ]
+            }
+          },
+          "response": [],
+          "uid": "24791289-90ab9536-5055-4933-b4f1-83df30b9ad7d"
+        },
+        {
+          "name": "accept friend requests",
+          "id": "3adc17cf-7398-46c8-8458-0411459cab31",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1NjgzMDY0LCJpYXQiOjE3MjU2ODEyNjQsImp0aSI6IjAyYjkxYWY4MGNjMzQ2Zjc4ODA0NmMxNGRmODdkMDk2IiwidXNlcl9pZCI6NX0.rq-t_6OJkryTVTidqDcIhKKheupJ9oRPxdP4tFBzPsk",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/accept-friend-request/2/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "accept-friend-request",
+                "2",
+                ""
+              ]
+            }
+          },
+          "response": [],
+          "uid": "24791289-3adc17cf-7398-46c8-8458-0411459cab31"
+        },
+        {
+          "name": "reject friend requests",
+          "id": "201dbdd5-273e-40a3-b6cd-8e3f6dfcda56",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1NjgzMDY0LCJpYXQiOjE3MjU2ODEyNjQsImp0aSI6IjAyYjkxYWY4MGNjMzQ2Zjc4ODA0NmMxNGRmODdkMDk2IiwidXNlcl9pZCI6NX0.rq-t_6OJkryTVTidqDcIhKKheupJ9oRPxdP4tFBzPsk",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/reject-friend-request/2/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "reject-friend-request",
+                "2",
+                ""
+              ]
+            }
+          },
+          "response": [],
+          "uid": "24791289-201dbdd5-273e-40a3-b6cd-8e3f6dfcda56"
+        },
+        {
+          "name": "List friends",
+          "id": "9b834abe-2436-44b8-8f3d-98bcb0148cb8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1NjgzMDY0LCJpYXQiOjE3MjU2ODEyNjQsImp0aSI6IjAyYjkxYWY4MGNjMzQ2Zjc4ODA0NmMxNGRmODdkMDk2IiwidXNlcl9pZCI6NX0.rq-t_6OJkryTVTidqDcIhKKheupJ9oRPxdP4tFBzPsk",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/list-friends/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "list-friends",
+                ""
+              ]
+            }
+          },
+          "response": [],
+          "uid": "24791289-9b834abe-2436-44b8-8f3d-98bcb0148cb8"
+        },
+        {
+          "name": "Lists all the pending friend requests",
+          "id": "603f9575-c23b-442f-862c-a98dcd3fed82",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1NjgzMDY0LCJpYXQiOjE3MjU2ODEyNjQsImp0aSI6IjAyYjkxYWY4MGNjMzQ2Zjc4ODA0NmMxNGRmODdkMDk2IiwidXNlcl9pZCI6NX0.rq-t_6OJkryTVTidqDcIhKKheupJ9oRPxdP4tFBzPsk",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/api/list-pending-friend-requests/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "list-pending-friend-requests",
+                ""
+              ]
+            }
+          },
+          "response": [],
+          "uid": "24791289-603f9575-c23b-442f-862c-a98dcd3fed82"
+        }
+      ]
+    }
+  }
+  

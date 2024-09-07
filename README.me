@@ -1,0 +1,56 @@
+# Social Network API
+
+## Installation Instructions
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/whoami-bib/social-network-api.git
+   ```
+
+2. Navigate to the project directory:
+   ```
+   cd social_network-api
+   ```
+
+3. Create and activate a virtual environment:
+   ```
+   python -m venv env
+   source env/bin/activate (Linux/Mac) or env\Scripts\activate (Windows)
+   ```
+
+4. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+5. Run the project:
+   ```
+   python manage.py runserver
+   ```
+
+## Docker Instructions
+
+1. Build the Docker image:
+   ```
+   docker-compose build
+   ```
+
+2. Run the Docker container:
+   ```
+   docker-compose up
+   ```
+
+## API Endpoints
+
+- Sign up: `POST /signup/`
+- Login: `POST /login/`
+- Send Friend Request: `POST /send-friend-request/`
+- Accept Friend Request: `POST /accept-friend-request/{{friend_request_id}}/`
+- Reject Friend Request: `POST /reject-friend-request/{{friend_request_id}}/`
+- List Friends: `GET /list-friends/`
+- List Pending Friend Requests: `GET /list-pending-friend-requests/`
+
+## Postman Collection
+
+-Postman collection in the repository for fast evaluation.
+postman-collection.json
